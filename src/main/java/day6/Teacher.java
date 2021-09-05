@@ -3,7 +3,7 @@ package day6;
 public class Teacher {
     private String name;
     private String subject;
-    private int mark;
+
 
     public Teacher(String name, String subject) {
         this.name = name;
@@ -16,8 +16,9 @@ public class Teacher {
     public String getSubject() {
         return subject;
     }
-    private String mark2;
-    public void evaluate() {
+    int mark = 0;
+    public void evaluate(Student student) {
+        String mark2 = "";
             mark = (int) (2 + (Math.random() * 4));
             switch (mark) {
                     case 2:
@@ -33,14 +34,12 @@ public class Teacher {
                         mark2 = "отлично";
                         break;
             }
+        System.out.println("Преподаватель " +
+                this.name + " оценил студента с именем " +
+                student.getName() + " по предмету " +
+                this.subject + " на оценку " + mark2);
 
     }
 
-    public String getMark2() {
-        return mark2;
-    }
 
-    public int getMark() {
-    return mark;
-    }
 }

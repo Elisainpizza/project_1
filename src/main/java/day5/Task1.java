@@ -7,6 +7,7 @@ public class Task1 {
         auto.setColor("Blue");
         auto.setYearOfIssue(2021);
         auto.speak();
+
     }
 }
 

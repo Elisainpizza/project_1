@@ -4,6 +4,7 @@ public class Task2 {
     public static void main(String[] args) {
         Motorbike first = new Motorbike("Volvo", "Blue", 2021);
         first.speak();
+
     }
 }
 

@@ -15,38 +15,28 @@ public class Task1 {
         System.out.println(Arrays.toString(array));
         System.out.println("Длина массива: "+ array.length);
 
-        int counter8 = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > 8)
-                counter8++;
-        }
-        System.out.println("Количество чисел больше 8: " + counter8);
 
         int counter1 = 0;
-        for (int i = 0; i < array.length; i++){
-            if (array[i] == 1)
-                counter1++;
-        }
-        System.out.println("Количество чисел равных 1: " + counter1);
-
+        int counter8 = 0;
         int counter2 = 0;
-        for (int i = 0; i < array.length; i++)  {
-            if (array[i] % 2 == 0)
-                counter2++;
-        }
-        System.out.println("Количество четных чисел: " + counter2);
-
         int counter3 = 0;
-        for (int i = 0; i < array.length; i++){
-            if (array[i] % 2 != 0)
-                counter3++;
-        }
-        System.out.println("Количество нечетных чисел: " + counter3);
-
         int sum = 0;
         for (int i = 0; i < array.length; i++){
             sum += array[i];
+            if (array[i] == 1)
+                counter1++;
+            else if (array [i] > 8)
+                counter8++;
+            else if (array[i] % 2 == 0)
+                counter2++;
+            else if (array[i] % 2 != 0)
+                counter3++;
+
         }
+        System.out.println("Количество чисел равных 1: " + counter1);
+        System.out.println("Количество чисел больше 8: " + counter8);
+        System.out.println("Количество четных чисел: " + counter2);
+        System.out.println("Количество нечетных чисел: " + counter3);
         System.out.println("Сумма всех элементов массива: " + sum);
     }
 
